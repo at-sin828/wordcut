@@ -18,3 +18,7 @@ def wrap(text: str, width: int) -> list[str]:
             current = word
     lines.append(current)
     return lines
+
+
+def wrap_text(text: str, width: int) -> str:
+    return "\n".join(wrap(text, width))
