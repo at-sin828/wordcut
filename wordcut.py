@@ -20,5 +20,9 @@ def wrap(text: str, width: int) -> list[str]:
     return lines
 
 
+def line_count(text: str, width: int) -> int:
+    return len(wrap(text, width))
+
+
 def wrap_text(text: str, width: int) -> str:
     return "\n".join(wrap(text, width))
