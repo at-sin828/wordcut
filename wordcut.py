@@ -26,3 +26,10 @@ def line_count(text: str, width: int) -> int:
 
 def wrap_text(text: str, width: int) -> str:
     return "\n".join(wrap(text, width))
+
+
+def longest_line(text: str, width: int) -> int:
+    lines = wrap(text, width)
+    if not lines:
+        return 0
+    return max(len(line) for line in lines)
