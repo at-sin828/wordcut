@@ -33,3 +33,10 @@ def longest_line(text: str, width: int) -> int:
     if not lines:
         return 0
     return max(len(line) for line in lines)
+
+
+def shortest_line(text: str, width: int) -> int:
+    lines = wrap(text, width)
+    if not lines:
+        return 0
+    return min(len(line) for line in lines)
