@@ -1,6 +1,6 @@
 import unittest
 
-from wordcut import line_count, longest_line, wrap, wrap_text
+from wordcut import line_count, longest_line, shortest_line, wrap, wrap_text
 
 
 class WordcutTest(unittest.TestCase):
@@ -12,6 +12,8 @@ class WordcutTest(unittest.TestCase):
         self.assertEqual(line_count("", 4), 0)
         self.assertEqual(longest_line("one two three", 7), 7)
         self.assertEqual(longest_line("", 4), 0)
+        self.assertEqual(shortest_line("one two three", 7), 5)
+        self.assertEqual(shortest_line("", 4), 0)
 
 
 if __name__ == "__main__":
