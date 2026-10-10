@@ -3,7 +3,7 @@
 Wrap a sentence on spaces. Words are not split. Blank input returns an empty list.
 
 ```python
-from wordcut import wrap, wrap_text, line_count, longest_line, shortest_line
+from wordcut import wrap, wrap_text, line_count, longest_line, shortest_line, one_line
 
 wrap("one two three", 7)
 wrap_text("one two three", 7)  # "one two\nthree"
