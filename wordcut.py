@@ -40,3 +40,7 @@ def shortest_line(text: str, width: int) -> int:
     if not lines:
         return 0
     return min(len(line) for line in lines)
+
+
+def one_line(text: str, width: int) -> bool:
+    return line_count(text, width) <= 1
