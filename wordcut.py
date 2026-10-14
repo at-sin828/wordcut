@@ -50,3 +50,7 @@ def overlong(text: str, width: int) -> list[str]:
     if width < 1:
         raise ValueError("宽度至少为 1")
     return [word for word in (text or "").split() if len(word) > width]
+
+
+def word_count(text: str) -> int:
+    return len((text or "").split())
