@@ -54,3 +54,7 @@ def overlong(text: str, width: int) -> list[str]:
 
 def word_count(text: str) -> int:
     return len((text or "").split())
+
+
+def fits(text: str, width: int) -> bool:
+    return not overlong(text, width)
