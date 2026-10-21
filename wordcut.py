@@ -58,3 +58,10 @@ def word_count(text: str) -> int:
 
 def fits(text: str, width: int) -> bool:
     return not overlong(text, width)
+
+
+def longest_word(text: str) -> int:
+    words = (text or "").split()
+    if not words:
+        return 0
+    return max(len(word) for word in words)
