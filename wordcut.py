@@ -65,3 +65,10 @@ def longest_word(text: str) -> int:
     if not words:
         return 0
     return max(len(word) for word in words)
+
+
+def shortest_word(text: str) -> int:
+    words = (text or "").split()
+    if not words:
+        return 0
+    return min(len(word) for word in words)
