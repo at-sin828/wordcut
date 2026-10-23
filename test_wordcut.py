@@ -1,6 +1,6 @@
 import unittest
 
-from wordcut import fits, line_count, longest_line, longest_word, one_line, overlong, shortest_line, word_count, wrap, wrap_text
+from wordcut import fits, line_count, longest_line, longest_word, one_line, overlong, shortest_line, shortest_word, word_count, wrap, wrap_text
 
 
 class WordcutTest(unittest.TestCase):
@@ -23,6 +23,8 @@ class WordcutTest(unittest.TestCase):
         self.assertFalse(fits("one two three", 4))
         self.assertEqual(longest_word("one two three"), 5)
         self.assertEqual(longest_word(""), 0)
+        self.assertEqual(shortest_word("one two three"), 3)
+        self.assertEqual(shortest_word(""), 0)
 
 
 if __name__ == "__main__":
