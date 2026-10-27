@@ -72,3 +72,7 @@ def shortest_word(text: str) -> int:
     if not words:
         return 0
     return min(len(word) for word in words)
+
+
+def word_gap(text: str) -> int:
+    return longest_word(text) - shortest_word(text)
