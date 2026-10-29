@@ -76,3 +76,6 @@ def shortest_word(text: str) -> int:
 
 def word_gap(text: str) -> int:
     return longest_word(text) - shortest_word(text)
+
+def word_even(text: str) -> bool:
+    return word_count(text) > 0 and word_gap(text) == 0
