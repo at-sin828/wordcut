@@ -79,3 +79,6 @@ def word_gap(text: str) -> int:
 
 def word_even(text: str) -> bool:
     return word_count(text) > 0 and word_gap(text) == 0
+
+def no_words(text: str) -> bool:
+    return word_count(text) == 0
